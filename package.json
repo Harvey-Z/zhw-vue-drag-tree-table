@@ -1,7 +1,7 @@
 {
   "name": "zhw-drag-tree-table",
   "description": "基于Vue实现可以拖拽排序的树形表格",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "author": "zhanghongwei",
   "license": "MIT",
   "main": "dist/dtree-table.js",
@@ -37,5 +37,9 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ColdDay/vue-drag-tree-table/issues"
+  },
+  "homepage": "https://github.com/ColdDay/vue-drag-tree-table#readme"
 }

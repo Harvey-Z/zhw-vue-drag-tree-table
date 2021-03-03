@@ -22,8 +22,8 @@
                         </span>
                         <span v-else class="zip-icon arrow-transparent">
                         </span>
-                        <span v-if="subItem.formatter" @click.prevent="subItem.onclick(model)" v-html="subItem.formatter(model)"></span>
-                        <span v-else @click.prevent="subItem.onclick(model)" v-html="model[subItem.field]"></span>
+                        <span v-if="subItem.formatter" @click="subItem.onclick(model)" v-html="subItem.formatter(model)"></span>
+                        <span v-else @click="subItem.onclick(model)" v-html="model[subItem.field]"></span>
 
                     </span>
                     <span v-else-if="subItem.type === 'action'">
