@@ -12,7 +12,7 @@ IE10+/Chrome/firefox
 ## 安装
 npm
 ``` bashs
-npm i drag-tree-table --save-dev
+npm i zhw-drag-tree-table --save-dev
 ```
 script
 ``` bashs
@@ -71,7 +71,7 @@ export default {
 </template>
 
 <script>
-import dragTreeTable from "drag-tree-table";
+import dragTreeTable from "zhw-drag-tree-table";
 
 export default {
   name: "app",
