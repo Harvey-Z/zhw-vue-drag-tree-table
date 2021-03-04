@@ -2,22 +2,16 @@
 
 IE10+/Chrome/firefox
 
-## 请更新到```2.0.8```及以上版本 [在线DEMO](https://mofazhuan.com/vue-drag-tree-table-demo#/)
 > 基于vue实现的可以拖拽排序的树形表格  
 
 支持拖拽排序、固定头、拖拽改变行宽，checkbox多选、自定义单元格内容、设置行的背景色、动态控制某些行是否可以拖拽等等....
-
-![drag-tree-table](imgs/demo.gif 'drag-tree-table')
 
 ## 安装
 npm
 ``` bashs
 npm i zhw-drag-tree-table --save-dev
 ```
-script
-``` bashs
-<script src="./dist/dtree-table.js"></script>
-```
+
 ## 使用方式
 
 ```html
@@ -33,7 +27,7 @@ script
 </template>
 
 <script>
-import dragTreeTable from "drag-tree-table";
+import dragTreeTable from "zhw-drag-tree-table";
 export default {
   name: "app",
   data() {
@@ -54,15 +48,6 @@ export default {
   },
 };
 </script>
-
-
-## 如何使用
----
-
-### 安装
-```shell
-    npm install --save drag-tree-table
-```
 
 ### 使用
 ```html
@@ -103,9 +88,6 @@ DelById|id|删除ID对应的行，返回删除后的数据，需要手动更新�
 ZipAll|无|全部折叠
 OpenAll|无|全部打开
 GetLevelById|id|根据ID获取当前行的层级level
-
-具体使用方式可以点击上面超链，查看具体demo
-
 
 ## 参数配置
 ---
@@ -295,6 +277,4 @@ custom_field: {
     parent_id: 'parent_id'
 }
 ```
-
-[更新日志-CHANGELOG](CHANGELOG.md 'vue-drag-tree-table')
 
