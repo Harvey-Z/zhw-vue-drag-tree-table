@@ -24,6 +24,7 @@
           v-bind:style="bodyStyle"
           @dragover="draging"
           @dragend="drop"
+          :key="refresh"
           :class="isDraing ? 'is-draging' : '' ">
           <row depth="0" :columns="data.columns" :isdraggable="isdraggable"
             :model="item"
@@ -84,6 +85,7 @@
       return {
         dragX: 0,
         dragY: 0,
+        refresh:1,
         dragId: '',
         targetId: '',
         whereInsert: '',
@@ -438,11 +440,13 @@
         this.setAllCheckData(this.data.lists, !!evt.target.checked);
         const checkedList = this.getCheckedList(this.data.lists)
         func && func(checkedList)
+        this.refresh+=1
       },
       // 单个CheckBox勾选触发
       onSingleCheckChange() {
         const checkedList = this.getCheckedList(this.data.lists)
         this.onCheckChange && this.onCheckChange(checkedList)
+        this.refresh+=1
       },
       // 根据flag批量处理数据
       setAllCheckData (curList, flag) {
