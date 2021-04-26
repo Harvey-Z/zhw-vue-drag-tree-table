@@ -26,14 +26,17 @@
           @dragend="drop"
           :key="refresh"
           :class="isDraing ? 'is-draging' : '' ">
-          <row depth="0" :columns="data.columns" :isdraggable="isdraggable"
+          <row depth="0" 
+            :columns="data.columns" 
+            :isdraggable="isdraggable"
             :model="item"
             v-for="(item, index) in data.lists"
             :custom_field="custom_field"
             :onCheck="onSingleCheckChange"
             :border="border === undefined ? resize : border"
             :isContainChildren="isContainChildren"
-            :key="index">
+            :key="index"
+            :dataLists="data.lists">
         </row>
         </div>
         <div class="drag-line">
@@ -53,11 +56,7 @@
   }
   export default {
     name: "dragTreeTable",
-    components: {
-        row,
-        column,
-        space
-    },
+    components: { row, column, space },
     computed: {
       bodyStyle(){
         return {
@@ -399,7 +398,6 @@
           for (var i = 0; i< list.length; i++) {
               if (list[i][_this.custom_field['id']] == id) {
                 var newRow = Object.assign({}, list[i], data);
-                console.log(2222, newRow)
                 list[i] = newRow;
               }
               if (list[i][listKey] && list[i][listKey].length) {
@@ -408,7 +406,6 @@
           }
         }
         deep(deepList);
-        console.log(deepList)
         this.data.lists = deepList
       },
       GetChildIds(id, deep=true) {
