@@ -72,8 +72,8 @@ export default {
         width: 100,
         align: "center",
         onChange: (item)=>{
-          console.log(item)
-          alert('您选中了'+ item.length + '条数据');
+          // console.log(item)
+          // alert('您选中了'+ item.length + '条数据');
         }
       },
       {
