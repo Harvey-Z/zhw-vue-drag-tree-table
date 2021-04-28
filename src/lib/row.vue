@@ -137,8 +137,8 @@
 							var i = this.dataLists.findIndex((value, index, arr)=>{
 								return value.id == model.parent_id
 							})
-
-							var j = this.dataLists[i].lists.filter((value, index, arr)=>{
+							
+							var j = this.dataLists[i].[this.custom_field.lists].filter((value, index, arr)=>{
 								return value.checked == false || value.checked==undefined
 							})
 
